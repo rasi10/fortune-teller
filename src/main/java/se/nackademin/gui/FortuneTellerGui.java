@@ -8,13 +8,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class FortuneTellerGui extends JFrame implements ActionListener {
-    private static String NAME_LABEL = "Name:";
-    private static String INCOME_LABEL = "Income (monthly):";
-    private static String LOCATION_LABEL = "Location:";
-    private static String AGE_LABEL = "Age:";
-    private static String HEIGHT_LABEL = "Height:";
-    private static String FORTUNE_LABEL = "Your fortune:";
-    private static String BUTTON_TEXT = "Calculate";
+    private static String NAME_LABEL = "Namn:";
+    private static String INCOME_LABEL = "Lön(månad):";
+    private static String LOCATION_LABEL = "Bostadsort:";
+    private static String AGE_LABEL = "Ålder:";
+    private static String HEIGHT_LABEL = "kroppslängd:";
+    private static String FORTUNE_LABEL = "Din spådd framtid:";
+    private static String BUTTON_TEXT = "Beräkna";
     FortuneTeller fortuneTeller;
     JTextField nameField = new JTextField();
     JTextField incomeField = new JTextField();
@@ -31,7 +31,7 @@ public class FortuneTellerGui extends JFrame implements ActionListener {
     }
 
     private void initialize() {
-        setTitle("Fortune teller application");
+        setTitle("Spådomsapp");
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(640, 480);
