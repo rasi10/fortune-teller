@@ -18,6 +18,9 @@ public class Translator {
     private ArrayList<String> arrayOfVerbs= new ArrayList<String>();
     
     public Translator(){
+        populateArrayOfAdjectives();
+        populateArrayOfSubstantives();
+        populateArrayOfVerbs();
         
     }
     
