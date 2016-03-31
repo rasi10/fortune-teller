@@ -31,6 +31,7 @@ public class FortuneTellerGui extends JFrame implements ActionListener {
     }
 
     private void initialize() {
+        setTitle("Fortune teller application");
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(640, 480);
@@ -47,7 +48,9 @@ public class FortuneTellerGui extends JFrame implements ActionListener {
         mainPanel.add(heightField);
         mainPanel.add(calculateButton);
         mainPanel.add(new JLabel(FORTUNE_LABEL));
-        mainPanel.add(resultField);
+        resultField.setEditable(false);
+        
+        mainPanel.add(resultField);        
         getContentPane().add(mainPanel);
         calculateButton.addActionListener(this);
     }
