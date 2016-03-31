@@ -63,22 +63,21 @@ public class Translator {
        this.arrayOfVerbs.add("resa");
        
     }
-    
-    
+       
     
     
     public String returnSubstantive(int numberOnTheTable){
-        String result = "This method returns a substantive";
+        String result = this.arrayOfSubstantives.get(numberOnTheTable);
         return result;
     }
     
     public String returnAdjective(int numberOnTheTable){
-        String result = "This method returns a verb";
+        String result = this.arrayOfAdjectives.get(numberOnTheTable);
         return result;
     }   
     
     public String returnVerb(int numberOnTheTable){
-        String result = "This method returns a verb";
+        String result = this.arrayOfVerbs.get(numberOnTheTable);
         return result;
     }
 }

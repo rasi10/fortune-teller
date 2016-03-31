@@ -9,10 +9,10 @@ import java.awt.event.ActionListener;
 
 public class FortuneTellerGui extends JFrame implements ActionListener {
     private static String NAME_LABEL = "Namn:";
-    private static String INCOME_LABEL = "Lön(månad):";
+    private static String INCOME_LABEL = "Månadsinkonst:";
     private static String LOCATION_LABEL = "Bostadsort:";
     private static String AGE_LABEL = "Ålder:";
-    private static String HEIGHT_LABEL = "kroppslängd:";
+    private static String HEIGHT_LABEL = "Längd (i cm)";
     private static String FORTUNE_LABEL = "Din spådd framtid:";
     private static String BUTTON_TEXT = "Beräkna";
     FortuneTeller fortuneTeller;
