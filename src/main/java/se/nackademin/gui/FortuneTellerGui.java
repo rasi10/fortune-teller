@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class FortuneTellerGui extends JFrame implements ActionListener {
+    private static String APP_TITLE = "SPÅDOMSAPP";
     private static String NAME_LABEL = "Namn:";
     private static String INCOME_LABEL = "Månadsinkonst:";
     private static String LOCATION_LABEL = "Bostadsort:";
@@ -31,7 +32,7 @@ public class FortuneTellerGui extends JFrame implements ActionListener {
     }
 
     private void initialize() {
-        setTitle("Spådomsapp");
+        setTitle(APP_TITLE);
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(640, 480);
@@ -48,7 +49,7 @@ public class FortuneTellerGui extends JFrame implements ActionListener {
         mainPanel.add(heightField);
         mainPanel.add(calculateButton);
         mainPanel.add(new JLabel(FORTUNE_LABEL));
-        resultField.setEditable(false);
+        //resultField.setEditable(false);
         
         mainPanel.add(resultField);        
         getContentPane().add(mainPanel);

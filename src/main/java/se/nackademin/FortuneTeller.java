@@ -20,10 +20,10 @@ public class FortuneTeller {
      */
     public String calculate() {
         String result = "Din framtid är " + translator.returnAdjective(magicNumbers.calculateA()) + 
-                        ". Du borde sluta"+ translator.returnVerb(magicNumbers.calculateB())+
-                        ".Vi ser att du snart kommer att skaffa"+ translator.returnSubstantive(magicNumbers.calculateC())+
-                        ".Snart kommer du vilja"+translator.returnVerb(magicNumbers.calculateD())+
-                        ", men då är det viktigt att du är"+ translator.returnAdjective(magicNumbers.calculateE())+
+                        ". Du borde sluta "+ translator.returnVerb(magicNumbers.calculateB())+
+                        ".Vi ser att du snart kommer att skaffa "+ translator.returnSubstantive(magicNumbers.calculateC())+
+                        ".Snart kommer du vilja "+translator.returnVerb(magicNumbers.calculateD())+
+                        ", men då är det viktigt att du är "+ translator.returnAdjective(magicNumbers.calculateE())+
                         ".";
         
         return result;

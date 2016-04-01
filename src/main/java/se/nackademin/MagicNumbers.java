@@ -14,16 +14,14 @@ public class MagicNumbers {
         count = count + 1 + getAge();
         do {
             count = count - 7;
-            System.out.println(count);
         } while (count >= 10);
-        return 0;
+        return count;
     }
 
     public int calculateB() {
         String givenLocation = getLocation();
         int givenIncome = getIncome();
         int count = givenLocation.length() + givenIncome;
-        System.out.println(count);
         do {
             count = count - 7;
         } while (count >= 10);
