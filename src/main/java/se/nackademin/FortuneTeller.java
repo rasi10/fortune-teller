@@ -3,6 +3,7 @@ package se.nackademin;
 import se.nackademin.gui.FortuneTellerGui;
 
 public class FortuneTeller {
+
     MagicNumbers magicNumbers;
     FortuneTellerGui fortuneTellerGui;
     Translator translator = new Translator();
@@ -18,8 +19,13 @@ public class FortuneTeller {
      *
      */
     public String calculate() {
-        String result = "Din framtid är "+translator.returnAdjective(magicNumbers.calculateA())+". Du borde sluta verb(<B>). Vi ser att du snart kommer "
-                + "att skaffa substantiv(<C>). Snart kommer du vilja verb(<D>), men då är det viktigt att du är adjektiv(<E>).";
+        String result = "Din framtid är " + translator.returnAdjective(magicNumbers.calculateA()) + 
+                        ". Du borde sluta"+ translator.returnVerb(magicNumbers.calculateB())+
+                        ".Vi ser att du snart kommer att skaffa"+ translator.returnSubstantive(magicNumbers.calculateC())+
+                        ".Snart kommer du vilja"+translator.returnVerb(magicNumbers.calculateD())+
+                        ", men då är det viktigt att du är"+ translator.returnAdjective(magicNumbers.calculateE())+
+                        ".";
+        
         return result;
     }
 
@@ -55,7 +61,7 @@ public class FortuneTeller {
             return false;
         } else {
             magicNumbers.setIncome(incomeValue);
-            return incomeValue<=10_000_000;
+            return incomeValue <= 10_000_000;
         }
     }
 

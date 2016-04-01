@@ -9,49 +9,65 @@ public class MagicNumbers {
     private int height;
 
     public int calculateA() {
-        String name = getName();
         int count = 0;
-        int userAge = getAge();
-        if (name.length() == 0){        	
-        	count = -1;
-        }else{        	
-            for (char c : name.toCharArray()) {
-                if (c == ' ') {
-                    count++;
-                }
-            }
-        }
-        		      
-        
-        
-        count++;        
-        count = count + userAge;        
-        do{
-            count = count -7;
+        count += getName().length() - getName().replaceAll(" ", "").length();
+        count = count + 1 + getAge();
+        do {
+            count = count - 7;
             System.out.println(count);
-        }while(count>=10);        
-        
-        return count;      
+        } while (count >= 10);
+        return 0;
     }
 
     public int calculateB() {
-        //TODO: calculate B
-        return 0;
+        String givenLocation = getLocation();
+        int givenIncome = getIncome();
+        int count = givenLocation.length() + givenIncome;
+        System.out.println(count);
+        do {
+            count = count - 7;
+        } while (count >= 10);
+
+        return count;
     }
 
     public int calculateC() {
-        //TODO: calculate C
-        return 0;
+        int count = calculateA() + calculateB();
+        count = count - getHeight();
+        do {
+            count = count + 10;
+        } while (count <= 0);
+
+        return count;
     }
 
     public int calculateD() {
-        //TODO: calculate D
-        return 0;
+        int count = 0;
+        if (calculateA() > 5) {
+            count = calculateA() + calculateB();
+        } else {
+            count = calculateA() + calculateC();
+        }
+        count = count - getIncome();
+        do {
+            count = count + 10;
+        } while (count <= 0);
+
+        return count;
     }
 
     public int calculateE() {
-        //TODO: calculate E
-        return 0;
+        int result = 0;
+        double count = getAge();
+        count = count * getIncome() * getIncome() * getHeight();
+        count = Math.sqrt(count);
+
+        do {
+            count = count / 2;
+        } while (count > 10.0);
+
+        result = Math.round((float) count);
+        return result;
     }
 
     public void setName(String name) {
@@ -93,7 +109,5 @@ public class MagicNumbers {
     public int getHeight() {
         return this.height;
     }
-    
-    
-    
+
 }
